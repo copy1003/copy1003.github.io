@@ -1,67 +1,300 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Copy1003.GitHub.io by copy1003</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Copy1003.GitHub.io</h1>
+      <h2 class="project-tagline">光北时间管理博客</h2>
+    </section>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <article class="post">
+    <section class="main-content">
+      <h1>
+<a id="gaya-jekyll-theme" class="anchor" href="#gaya-jekyll-theme" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Gaya Jekyll Theme</h1>
 
-    {% if post.banner_image %}
-    <div class="banner-image">
-      <a href="{{ post.url | append: '/' | replace: '//', '/' | prepend: site.baseurl | prepend: site.url |  }}" 
-        title="{{ post.title }}">
-      <img 
-          src="{{ "/assets/images/" | append: post.banner_image | prepend: site.baseurl | prepend: site.url }}" 
-          alt="{% if post.banner_image_alt %}{{ post.banner_image_alt }}{% else %}{{ post.title }} {% endif %}">
-      </a>
-    </div>
-    {% endif %}
+<p>Modern responsive theme made for jekyll blogging platform. 
+Gaya is a simple theme build from ground up with the focus of performance. 
+The theme itself quickly adapts to the users device, so it looks great on 
+smartphones, tablets, desktops or even the large monitors.</p>
 
-    <h1 class="post-title">
-      <a href="{{ post.url | append: '/' | replace: '//', '/' | prepend: site.baseurl | prepend: site.url |  }}">
-        {{ post.title }}
-      </a>
-    </h1>
+<ul>
+<li>Ability to change theme color at any time with any color.</li>
+<li>Easy customizable menu navigation.</li>
+<li>SEO Friendly</li>
+<li>Embed image, YouTube/Vimeo video or SoundCloud audio to your post.</li>
+</ul>
 
-    <p class="post-meta">
-    {% if (post.categories.size > 0 %}
-      <span class="categories">
-      {{ post.categories | array_to_sentence_string }}
-      </span> |
-    {% endif %}
-    <span class="post-date">
-    {{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}  
-    </span>
-    </p>
+<hr>
 
-    {{ post.excerpt }}
-  </article>
-  {% endfor %}
-</div>
+<p><img src="http://gayan.me/thumbnails/gaya-jekyll-theme-preview-590x300.png" alt="Theme preview" title="Gaya jekyll theme"></p>
 
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
+<h3>
+<a id="need-help" class="anchor" href="#need-help" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Need Help?</h3>
+
+<p>Please submit as an 
+<a href="https://github.com/web-create/harmony/issues/new">issue</a>, I am happy 
+to response back.</p>
+
+<h2>
+<a id="how-to-installrun" class="anchor" href="#how-to-installrun" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to install/run</h2>
+
+<ol>
+<li>
+<a href="https://github.com/gayanvirajith/gaya">Fork</a> this repository.</li>
+<li>Clone it: git clone <a href="https://github.com/YOUR-USERNAME/gaya">https://github.com/YOUR-USERNAME/gaya</a>.</li>
+<li>If you completely new to jekyll, please read more about <a href="http://jekyllrb.com/">Jekyll</a> and <a href="https://help.github.com/articles/using-jekyll-with-pages">Github pages</a>.</li>
+<li>Change your directory into cloned repository. </li>
+<li>Run <code>bundle install</code>
+</li>
+<li>Edit the _config.yml on root directory. Change <code>url</code> property to to 
+<code>http://127.0.0.1:4000</code> since you are going to run on localhost.</li>
+<li>Run the jekyll server by having: <code>bundle exec jekyll serve --baseurl ''</code> or <code>rake preview</code><br>
+</li>
+</ol>
+
+<p>Try to locate your browser at <a href="http://localhost:4000">http://localhost:4000</a>.</p>
+
+<p>Note: If you are a windows user please refer this nice website - <a href="http://jekyll-windows.juthilo.com/">http://jekyll-windows.juthilo.com/</a> by Julian Thilo to configure ruby + jekyll on windows.</p>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>master</p>
+
+<h2>
+<a id="theme-options-and-configurations" class="anchor" href="#theme-options-and-configurations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Theme options and configurations</h2>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<p>Following options can be seen within the file <code>_config.yml</code>. More information 
+about configuration can be found on the <a href="http://jekyllrb.com">Jekyll Documentationn</a></p>
+
+<h3>
+<a id="general-settings" class="anchor" href="#general-settings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>General settings</h3>
+
+<table>
+<thead>
+<tr>
+<th>Property name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>The title of your blog shown in the site header along with the logo.</td>
+</tr>
+<tr>
+<td><code>tagline</code></td>
+<td>The site tagline also shown in the site header along with the title.</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>The email address associated with blog/site.</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>The site description used to show author's/site's description in the top of the sidebar.</td>
+</tr>
+<tr>
+<td><code>baseurl</code></td>
+<td>The subpath of your site, e.g. /blog/. More information can be found in the <a href="http://jekyllrb.com">Jekyll Documentationn</a>.</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>The base host name &amp; protocol for your site. More information can be found in the <a href="http://jekyllrb.com">Jekyll Documentationn</a>.</td>
+</tr>
+<tr>
+<td><code>logourl</code></td>
+<td>Path to main logo image.</td>
+</tr>
+<tr>
+<td><code>author_thumbnail</code></td>
+<td>Path to author's thumbnail image.</td>
+</tr>
+<tr>
+<td><code>author</code></td>
+<td>Name of the author.</td>
+</tr>
+<tr>
+<td><code>paginate</code></td>
+<td>Number of posts to show per page, More information can be found in the <a href="http://jekyllrb.com">Jekyll Documentationn</a>.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="social-profile-links" class="anchor" href="#social-profile-links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Social profile links</h3>
+
+<table>
+<thead>
+<tr>
+<th>Property name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>github</code></td>
+<td>GitHub link (Leave empty to exclude)</td>
+</tr>
+<tr>
+<td><code>twitter</code></td>
+<td>Twitter link (Leave empty to exclude)</td>
+</tr>
+<tr>
+<td><code>facebook</code></td>
+<td>Facebook link (Leave empty to exclude)</td>
+</tr>
+<tr>
+<td><code>gplus</code></td>
+<td>Google plus link (Leave empty to exclude)</td>
+</tr>
+<tr>
+<td><code>dribble</code></td>
+<td>Dribble link (Leave empty to exclude)</td>
+</tr>
+<tr>
+<td><code>pinterest</code></td>
+<td>Pinterest link (Leave empty to exclude)</td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="theme-settings" class="anchor" href="#theme-settings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Theme settings</h3>
+
+<table>
+<thead>
+<tr>
+<th>Property name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>highlight_color</code></td>
+<td>The main highlight/theme color of the site. You can put any color as a hex color. The configured color will be applied to sidebar, anchor links, buttons etc.</td>
+</tr>
+<tr>
+<td><code>show_share_buttons</code></td>
+<td>Set as True/False to enable or disable Post share option.</td>
+</tr>
+<tr>
+<td><code>show_author_info</code></td>
+<td>Set as True/False to enable or disable the author information on a post.</td>
+</tr>
+<tr>
+<td><code>disqus_shortname</code></td>
+<td>Disqus Short name for Disqus comments. Leave empty to disable comments.</td>
+</tr>
+<tr>
+<td><code>google_analytics_key</code></td>
+<td>Enter your Google analytics tracking ID to enable analytic support.</td>
+</tr>
+<tr>
+<td><code>google_webmaster_key</code></td>
+<td>Enter your Google web-master verification key to verify your site with the web-master tool. (This is an alternative way of verifying your site with the web-master tool, the general way is to upload a file to your server.)</td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="page-level-configurations" class="anchor" href="#page-level-configurations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Page level configurations</h3>
+
+<p>These configurations can be found within the top section of the each page, see the a post under <code>_posts</code> directory for example. </p>
+
+<table>
+<thead>
+<tr>
+<th>Property name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>banner_image</code></td>
+<td>Specify the image name eg: <code>sample-banner-image-1.jpg</code> for banner image for the post. Jekyll system tries to locate the image under <code>assets/images</code>. So make sure you place all banner images under assets/images.</td>
+</tr>
+<tr>
+<td><code>banner_video</code></td>
+<td>If you want to embed <code>Youtube/Vimeo</code> Video or <code>SoundCloud</code> audio, Specify the resource within single quotes. Please have a look on example post in <code>_posts/2014-12-14-what-is-nodejs.md</code> to see how we embed YouTube video.</td>
+</tr>
+<tr>
+<td><code>comments</code></td>
+<td>Set as True/False, if false will disable comments for current page/post.</td>
+</tr>
+<tr>
+<td><code>browser_title</code></td>
+<td>SEO property.  Use this property if you want to display different browser title other than default page title. Please have a look on example post under <code>_posts/2014-12-14-what-is-nodejs.md</code> to see how we used the property.</td>
+</tr>
+<tr>
+<td><code>meta_description</code></td>
+<td>SEO property. Use this property If you want to have unique meta description for each post. See the example post on <code>_posts/2014-12-14-what-is-nodejs.md</code> to see how we used the property.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="sidebar-navigation-configurations" class="anchor" href="#sidebar-navigation-configurations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sidebar navigation configurations</h3>
+
+<p>As jekyll supports data files, <strong>Gaya</strong> theme uses <code>YAML</code> <a href="http://jekyllrb.com/docs/datafiles/">data file</a> to load sidebar navigation items. You could find the <code>main-nav.yaml</code> data file under <code>_data/</code> directory. You could add any number of menu items by modifying <code>main-nav.yaml</code>. </p>
+
+<p>An example of <code>main-nav.yaml</code>:</p>
+
+<pre><code>- title: "About me" # Title/Caption of the menu item
+  href: "/about" # the page where it pointed
+- title: "Blog Archive"
+  href: "/archive"
+</code></pre>
+
+<p>At some point you want to link an external URL, in that case you could edit the <code>_includes/sidebar.html</code> file. See the following example:</p>
+
+<pre><code>&lt;nav class="sidebar-nav"&gt;
+   &lt;a class="sidebar-nav-item" 
+      href="http://www.example.com"
+      target="_blank"&gt;
+      Example site
+    &lt;/a&gt;
+&lt;/nav&gt;
+</code></pre>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>(The MIT License)</p>
+
+<p>Copyright (c) 2014 Gayan Virajith</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+
+      <footer class="site-footer">
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
   
-  {% if paginator.next_page %}
-      <a class="pagination-item older btn" href="{{ paginator.next_page_path | prepend: site.baseurl | append: '/' | replace: '//', '/' }}">Older</a>    
-  {% else %}
-    <span class="pagination-item older btn-disabled">Older</span>
-  {% endif %}
-  
-  {% if paginator.previous_page %}
-    <a class="pagination-item newer btn " href="{{ paginator.previous_page_path | prepend: site.baseurl | append: '/' | replace: '//', '/' }}">Newer</a>
-  {% else %}
-    <span class="pagination-item newer btn-disabled">Newer</span>
-  {% endif %}  
-  
-</div>
-{% endif %}
-
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "url": "{{ '' | prepend: site.baseurl | prepend: site.url | append: '/' }}"
-    }
-}
-</script>
+  </body>
+</html>
